@@ -407,6 +407,43 @@
         #home {
             padding-top: 0;
         }
+
+        /* Current role highlight */
+        .current-role {
+            border-left: 4px solid #10b981;
+        }
+
+        .current-role::after {
+            background-color: #10b981 !important;
+        }
+
+        .tech-stack {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .tech-stack p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.3rem;
+            margin-top: 0.5rem;
+        }
+
+        .tech-item {
+            background: var(--primary);
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
     </style>
 </head>
 <body>
@@ -425,42 +462,42 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Hi, I'm Oshank 👋</h1>
-                <p class="subtitle">Senior Software Engineer | Go Developer | Distributed Systems Expert</p>
-                <p class="description">
-                    I'm a passionate Software Engineer with decade of expertise in backend development, 
-                    specializing in Golang and distributed systems. I thrive on building robust, secure, 
-                    and scalable microservices that adhere to SOLID principles.
-                </p>
-                <div class="cta-buttons">
-                    <a href="https://www.linkedin.com/in/oshankkumar/" class="btn btn-primary" target="_blank">
-                        <i class="fab fa-linkedin"></i> Connect on LinkedIn
-                    </a>
-                    <a href="#experience" class="btn btn-secondary">
-                        <i class="fas fa-briefcase"></i> View Experience
-                    </a>
-                </div>
+   <section id="home" class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Hi, I'm Oshank 👋</h1>
+            <p class="subtitle">Staff Software Engineer | Go Developer | Distributed Systems Expert</p>
+            <p class="description">
+                I'm a passionate Software Engineer with <strong>10+ years of expertise</strong> in backend development, 
+                specializing in Golang and distributed systems. I thrive on building robust, secure, 
+                and scalable microservices that adhere to SOLID principles.
+            </p>
+            <div class="cta-buttons">
+                <a href="https://www.linkedin.com/in/oshankkumar/" class="btn btn-primary" target="_blank">
+                    <i class="fab fa-linkedin"></i> Connect on LinkedIn
+                </a>
+                <a href="#experience" class="btn btn-secondary">
+                    <i class="fas fa-briefcase"></i> View Experience
+                </a>
             </div>
         </div>
-    </section>
+    </div>
+  </section>
 
     <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <p>
-                    I engineer backend systems that are fast, resilient, and maintainable. With nearly a decade 
-                    of experience in the software industry, I thrive on solving complex distributed problems and 
-                    writing code that scales. I'm always eager to tackle challenging problems and deliver solutions 
-                    that make a real impact.
-                </p>
-            </div>
+   <section id="about" class="section">
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <p>
+                I engineer backend systems that are fast, resilient, and maintainable. With <strong>over a decade 
+                of experience</strong> in the software industry, I thrive on solving complex distributed problems and 
+                writing code that scales. I'm always eager to tackle challenging problems and deliver solutions 
+                that make a real impact.
+            </p>
         </div>
-    </section>
+    </div>
+  </section>
 
     <!-- Skills Section -->
     <section id="skills" class="section" style="background: var(--bg-secondary);">
@@ -524,19 +561,56 @@
         <div class="container">
             <h2 class="section-title">Professional Experience</h2>
             <div class="timeline">
+                <!-- Current Position -->
+                <div class="timeline-item">
+                    <div class="timeline-content current-role">
+                        <h3>Staff Software Engineer</h3>
+                        <div class="company">Walmart Global Tech | Bengaluru, IN</div>
+                        <div class="duration">May 2024 - Present · 1 yr 6 mos</div>
+                        <p style="margin-bottom: 1rem; color: var(--text-secondary);">
+                            <strong>Traffic Platform, Edge Proxy</strong> - Building asset optimization system on the edge
+                        </p>
+                        <ul>
+                            <li>Leading development of next-generation edge proxy infrastructure</li>
+                            <li>Architecting high-performance asset optimization systems at the edge</li>
+                            <li>Driving technical decisions for traffic platform scalability</li>
+                            <li>Mentoring team members and establishing engineering best practices</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Previous Position at Walmart -->
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <h3>Senior Software Engineer</h3>
+                        <h3>Senior Software Engineer (IN4)</h3>
                         <div class="company">Walmart Global Tech | Bengaluru, IN</div>
-                        <div class="duration">Nov 2021 - Present</div>
+                        <div class="duration">Nov 2021 - May 2024 · 2 yrs 7 mos</div>
+                        <p style="margin-bottom: 1rem; color: var(--text-secondary);">
+                            Key contributor to the development of an asynchronous asset optimization pipeline—a distributed system designed to optimize static assets which helped in significantly improving webpage load times and overall end-user satisfaction.
+                        </p>
                         <ul>
-                            <li>Part of Walmart Edge foundation team, currently working on T1 Proxy</li>
-                            <li>Built asynchronous asset optimization pipeline handling 1B+ assets</li>
-                            <li>Developed Redis-based job queueing system handling 200K+ jobs/minute</li>
-                            <li>Improved Core Web Vitals and overall user experience</li>
-                            <li>Implemented regression tests using Ginkgo framework</li>
-                            <li>Automated deployments using Concord and Ansible</li>
+                            <li>🚀 Led scaling effort of optimization pipeline to handle over <strong>500 million assets</strong></li>
+                            <li>🛠️ Developed robust Redis-based job queueing system handling <strong>200,000+ jobs/minute</strong></li>
+                            <li>📈 Played crucial role in improving <strong>Core Web Vitals</strong> and user experience</li>
+                            <li>🧪 Implemented regression tests using <strong>Ginkgo framework</strong> for reliable releases</li>
+                            <li>🤖 Automated deployment processes using <strong>Concord and Ansible</strong></li>
                         </ul>
+                        <div class="tech-stack">
+                            <p><strong>Tech Stack:</strong></p>
+                            <div class="tech-list">
+                                <span class="tech-item">Golang</span>
+                                <span class="tech-item">Redis</span>
+                                <span class="tech-item">MySQL</span>
+                                <span class="tech-item">Kafka</span>
+                                <span class="tech-item">NSQ</span>
+                                <span class="tech-item">CosmosDB</span>
+                                <span class="tech-item">Ansible</span>
+                                <span class="tech-item">Azure</span>
+                                <span class="tech-item">Terraform</span>
+                                <span class="tech-item">Prometheus</span>
+                                <span class="tech-item">Grafana</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -623,7 +697,7 @@
                 <a href="https://github.com/oshankkumar" class="social-link" target="_blank">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="mailto:oshankfriends@gmail.com" class="social-link">
+                <a href="mailto:oshank.kumar@example.com" class="social-link">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
