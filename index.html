@@ -72,6 +72,19 @@ body {
 .highlight { color:var(--primary); }
 .ok { color:var(--success); }
 
+/* Download command */
+.download-link {
+  color:var(--primary);
+  text-decoration:none;
+  cursor:pointer;
+  border-bottom:1px dotted var(--primary);
+}
+
+.download-link:hover {
+  color:var(--success);
+  border-bottom-color:var(--success);
+}
+
 /* Experience log */
 .log {
   margin-left:20px;
@@ -249,6 +262,17 @@ body {
       <strong>Email:</strong> <a href="mailto:oshankfriends@gmail.com">oshankfriends@gmail.com</a><br>
       <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/oshankkumar/" target="_blank" rel="noopener">https://www.linkedin.com/in/oshankkumar/</a><br>
       <strong>GitHub:</strong> <a href="https://github.com/oshankkumar/" target="_blank" rel="noopener">https://github.com/oshankkumar/</a>
+    </div>
+  </div>
+
+  <!-- download resume -->
+  <div class="block">
+    <div class="line">
+      <span class="prompt">oshank@backend:~$</span>
+      <span class="command"><a href="oshank_kumar_go_dev.pdf" download class="download-link">download resume</a></span>
+    </div>
+    <div class="output ok">
+      oshank_kumar_go_dev.pdf [100%]
     </div>
   </div>
 
